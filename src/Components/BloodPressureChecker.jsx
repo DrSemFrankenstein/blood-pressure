@@ -241,7 +241,12 @@ const BloodPressureChecker = () => {
           />
         </Form.Item>
         <Form.Item>
-          <Button type="primary" htmlType="submit" block>
+          <Button
+            type="primary"
+            htmlType="submit"
+            block
+            disabled={systolic === null || diastolic === null}
+          >
             Check
           </Button>
         </Form.Item>
