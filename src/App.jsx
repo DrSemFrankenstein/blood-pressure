@@ -14,7 +14,10 @@ function App() {
       setDeferredPrompt(e);
       setInstallable(true);
     });
+  
+    return () => window.removeEventListener("beforeinstallprompt", () => {});
   }, []);
+  
 
   const handleInstallClick = () => {
     if (deferredPrompt) {
@@ -36,7 +39,11 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
       </Routes>
-      {installable && <Button onClick={handleInstallClick}>Install App</Button>}
+      {installable && (
+        <Button className="install-button" onClick={handleInstallClick}>
+          Install App
+        </Button>
+      )}
     </div>
   );
 }
