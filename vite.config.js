@@ -23,7 +23,7 @@ export default defineConfig({
             type: "image/png",
           },
           {
-            src: "/blood-pressure/android-chrome-512x512.png", 
+            src: "/blood-pressure/android-chrome-512x512.png",
             sizes: "512x512",
             type: "image/png",
           },
