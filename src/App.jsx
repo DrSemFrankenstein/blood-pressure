@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Route, Routes } from "react-router-dom";
 import Home from "./Components/Home";
 import About from "./Components/About";
+import { Button } from "antd";
 
 function App() {
   const [deferredPrompt, setDeferredPrompt] = useState(null);
@@ -35,7 +36,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
       </Routes>
-      {installable && <button onClick={handleInstallClick}>Install App</button>}
+      {installable && <Button onClick={handleInstallClick}>Install App</Button>}
     </div>
   );
 }
